@@ -2,27 +2,16 @@
 
 [![](https://melpa.org/packages/consult-badge.svg)](https://melpa.org/#/consult)
 
-This package provides various commands based on the Emacs completion function
-`completing-read`, in particular a more advanced buffer switching command and a
-variant of [Swiper](https://github.com/abo-abo/swiper#swiper). The commands are
-compatible with completion-systems based on the standard Emacs API, e.g., the
-Emacs builtin
-[Icomplete](https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html)
-and [Selectrum](https://github.com/raxod502/selectrum). If Icomplete is used, it
-is recommended to install
-[Icomplete-vertical](https://github.com/oantolin/icomplete-vertical). The goal
-is to keep the completion-system specifics in this package to a minimum.
+Consult is an Emacs package for searching based on =completing-read=. Consult is an alternative to [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html][isearch]] and [[https://github.com/abo-abo/swiper#swiper][Swiper]] for selecting and sorting matches based on live keyboad entries. 
 
-Note that if you use [Ivy](https://github.com/abo-abo/swiper#ivy) or
-[Helm](https://github.com/emacs-helm/helm), you don't need Consult, since both
-packages already bring their own rich set of additional commands.
+Consult comes with many commands, such as =consult-buffer=, =consult-grep=, =consult-line=, for searching and selecting familar items in Emacs. Consult commands are compatible with [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html][Icomplete]],
+[[https://github.com/raxod502/selectrum][Selectrum]] and
+[[https://github.com/oantolin/embark/][Embark's live-occur]]. Consult aims to keep specifics of completions to a minimum and rely on the completion systems to handle most features. This ensures consult benefits from improvements or extensions made to the underlying completions systems. For example, [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]] when using Icomplete. Consult indeed recommends Icomplete-veritical when using Icomplete.
 
-Note that there is the [Marginalia
-package](https://github.com/minad/marginalia/), which can be combined
-with Consult. The `marginalia-mode` enriches the completion display
-with documentation strings. The Marginalia package has been
-extracted from [Embark](https://github.com/oantolin/embark/) and Consult since
-both packages provided minibuffer annotations.
+Consult also works with other packages to enhance presentation and functionality of searching and selecting. [[https://github.com/minad/marginalia/][Marginalia]] adds annotations from doc strings or file information or default values to enrich the cryptic display of functions, files, and variable listings respectively. [[https://github.com/oantolin/embark/][Embark]] expands the default action on selected items to alternate actions, such as file copy, delete, compress, etc., on items that are files, and copy, delete, compare on itmes that are buffers. That is, actions adjust like in a context-sensitive menu.
+
+There have been many other attempts to bring the same functionality as consult. [[https://github.com/abo-abo/swiper#ivy][Ivy]] and
+[[https://github.com/emacs-helm/helm][Helm]] are recent ones with most features. Although many features they offer overlap with consult, not all of their functionality is in consult yet.
 
 ## Screenshots
 
